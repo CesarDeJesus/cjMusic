@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css/home.css")
+    @Styles.Render("~/Content/css/Navbar.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper"> 
+        <header>
+
+            <nav>
+
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+
+                <div class="logo">
+                    <img src="~/Content/Img/logooficial.gif" style="height:40px; width:40px;" alt="Logo"/>
+                   
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a style="text-decoration:none;"> @Html.ActionLink("Home", "Index", "Home")</a></li>
+                        <li><a style="text-decoration:none;">@Html.ActionLink("About", "About", "Home")</a></li>
+                        <li><a style="text-decoration:none;">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+
+        @RenderBody()
+
+        </div>
+        
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/Scripts/JS/Navbar.js")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
